@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Welcome new user sign up here</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body bgcolor="cyan">
+        <br>
+        <h1><u>MOVIES LIST</u></h1>
+        <center>
+        {% for movie in movies %}
+            <img src="{{Movie.movieimg.url}}" width="500" height="500"/>
+            <p>{{Movie.moviename}}</p>
+        {% endfor %}
+        </center>
+    </body>
+</html>

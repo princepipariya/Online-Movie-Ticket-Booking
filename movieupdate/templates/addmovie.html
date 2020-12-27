@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Welcome to movie ticket booking APP</title>
+</head>
+<body bgcolor="cyan">
+<center>
+	<h1>ADD MOVIE </h1>
+	<form action="/movieupdate/addmovie/" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}    
+		Movie Name:<input type="text" name="moviename" required/><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Image:
+    <input type="file" id="img" name="movieimg" accept="image/*" required><br>
+  <input type="submit">
+  <br>
+  {% if done %}
+    {{done}}
+  {% endif %}
+  <br>
+    {% if notdone %}
+    {{ notdone }}
+  {% endif %}
+</form>
+ <form action="/movieupdate/homesuper/"><input type="submit" value="Show all movie"> </form>
+</center>
+</body>
+</html>

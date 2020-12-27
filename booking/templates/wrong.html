@@ -1,0 +1,13 @@
+<html>
+<head></head>
+<body bgcolor="cyan"><center>
+     <form method="POST" action="/booking/timecheck/">
+     {% csrf_token%}
+    {% if invalidmsg%}
+      <h1>  {{invalidmsg}}</h1>
+    {% endif%}<br>
+    
+  
+<center>
+</body>
+</html>
